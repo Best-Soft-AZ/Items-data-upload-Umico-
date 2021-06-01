@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСкладВидЦен" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа склад вид цен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа склад вид цен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>55</Width>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСкладВидЦенРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<InputField name="Склад" id="3">
+							<DataPath>Объект.Склад</DataPath>
+							<ContextMenu name="СкладКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="5"/>
+						</InputField>
+						<InputField name="ВидЦены" id="6">
+							<DataPath>Объект.ВидЦены</DataPath>
+							<ContextMenu name="ВидЦеныКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ВидЦеныРасширеннаяПодсказка" id="8"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<Table name="НастройкиВыгрузкиДопРеквизитов" id="16">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.НастройкиВыгрузкиДопРеквизитов</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="НастройкиВыгрузкиДопРеквизитовКонтекстноеМеню" id="17"/>
+					<AutoCommandBar name="НастройкиВыгрузкиДопРеквизитовКоманднаяПанель" id="18">
+						<ChildItems>
+							<Button name="НастройкиВыгрузкиДопРеквизитовКомандаВыгружатьДопРеквизиты" id="38">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаВыгружатьДопРеквизиты</CommandName>
+								<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовКомандаВыгружатьДопРеквизитыРасширеннаяПодсказка" id="39"/>
+							</Button>
+							<Button name="НастройкиВыгрузкиДопРеквизитовКомандаОтменитьДопРеквизиты" id="40">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаОтменитьДопРеквизиты</CommandName>
+								<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовКомандаОтменитьДопРеквизитыРасширеннаяПодсказка" id="41"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовРасширеннаяПодсказка" id="19"/>
+					<SearchStringAddition name="НастройкиВыгрузкиДопРеквизитовСтрокаПоиска" id="20">
+						<AdditionSource>
+							<Item>НастройкиВыгрузкиДопРеквизитов</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВыгрузкиДопРеквизитовСтрокаПоискаКонтекстноеМеню" id="21"/>
+						<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НастройкиВыгрузкиДопРеквизитовСостояниеПросмотра" id="23">
+						<AdditionSource>
+							<Item>НастройкиВыгрузкиДопРеквизитов</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВыгрузкиДопРеквизитовСостояниеПросмотраКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НастройкиВыгрузкиДопРеквизитовУправлениеПоиском" id="26">
+						<AdditionSource>
+							<Item>НастройкиВыгрузкиДопРеквизитов</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НастройкиВыгрузкиДопРеквизитовУправлениеПоискомКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="НастройкиВыгрузкиДопРеквизитовДопРеквизит" id="32">
+							<DataPath>Объект.НастройкиВыгрузкиДопРеквизитов.ДопРеквизит</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НастройкиВыгрузкиДопРеквизитовДопРеквизитКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовДопРеквизитРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<CheckBoxField name="НастройкиВыгрузкиДопРеквизитовВыгружать" id="35">
+							<DataPath>Объект.НастройкиВыгрузкиДопРеквизитов.Выгружать</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВыгрузкиДопРеквизитовВыгружатьКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="НастройкиВыгрузкиДопРеквизитовВыгружатьРасширеннаяПодсказка" id="37"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПутьКФайлу" id="9">
+			<DataPath>Объект.ПутьККаталогу</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>83</MaxWidth>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="11"/>
+			<Events>
+				<Event name="StartChoice">ПутьКФайлуНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Button name="КомандаВыполнитьВыгрузку" id="12">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<CommandName>Form.Command.КомандаВыполнитьВыгрузку</CommandName>
+			<ExtendedTooltip name="КомандаВыполнитьВыгрузкуРасширеннаяПодсказка" id="13"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ВыгрузкаДанныхПоНоменклатуре</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыполнитьВыгрузку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнитьВыгрузку</Action>
+		</Command>
+		<Command name="КомандаВыгружатьДопРеквизиты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгружать доп реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгружать доп реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгружатьДопРеквизиты</Action>
+		</Command>
+		<Command name="КомандаОтменитьДопРеквизиты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отменить доп реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отменить доп реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОтменитьДопРеквизиты</Action>
+		</Command>
+	</Commands>
+</Form>
